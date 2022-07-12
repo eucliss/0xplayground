@@ -9,14 +9,6 @@ Some contracts are being built
 -   REDACTED.sol
 -   Prime.sol
 
-## Quickstart
-
-```sh
-git clone https://github.com/smartcontractkit/foundry-starter-kit
-cd foundry-starter-kit
-make # This installs the project's dependencies.
-make test
-```
 ## Go
 
 
