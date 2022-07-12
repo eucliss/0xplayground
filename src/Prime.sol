@@ -4,7 +4,7 @@ pragma solidity ^0.8.14;
 
 contract Prime {
 
-    function primeAddress(address addr) public returns (bool) {
+    function primeAddress(address addr) public view returns (bool) {
         uint256 addrValue = uint256(uint160(addr));
         return isPrime(addrValue);
     }
