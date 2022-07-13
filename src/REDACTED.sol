@@ -59,6 +59,29 @@ contract REDACTED is IREDACTED, Prime{
     // pay tribute 
 
     // Go fish
+    function goFish(uint256 amt) public {
+        uint256 bal = shitlist[msg.sender].BuhBalance;
+        if(amt != bal || amt != 0) {
+            // cheap bastard
+            shitlist[msg.sender].BuhBalance -= bal;
+            shitlist[fearlessLeader].BuhBalance += bal;
+        }
+        if(shitlist[msg.sender].shitprime){
+            require(shitlist[fearlessLeader].BuhBalance > 100, "Rent is too damn high!");
+            // All yours bud
+            shitlist[fearlessLeader].BuhBalance -= amt;
+            shitlist[msg.sender].BuhBalance += amt;
+        }
+
+        uint256 semiRandom = uint256(keccak256(abi.encodePacked(
+                block.timestamp, 
+                block.difficulty,
+                shitfest,
+                msg.sender
+            ))) % 96;
+
+
+    }
 
     // revoke access
 
