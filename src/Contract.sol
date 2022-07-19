@@ -1,7 +1,6 @@
 pragma solidity ^0.8.0;
 
 contract Contract {
-
     address public owner;
     string public message;
 
@@ -13,5 +12,4 @@ contract Contract {
         require(msg.sender == owner, "Not the owner guyo");
         message = newMessage;
     }
-
 }

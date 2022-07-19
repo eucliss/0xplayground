@@ -5,9 +5,8 @@ import "../Contract.sol";
 import {CheatCodes} from "./utils/CheatCodes.sol";
 
 contract ContractTest is DSTest {
-    Contract public c; 
+    Contract public c;
     CheatCodes cheats = CheatCodes(HEVM_ADDRESS);
-
 
     function setUp() public {
         c = new Contract();
@@ -23,5 +22,4 @@ contract ContractTest is DSTest {
         c.setMessage("testing message");
         assertEq(c.message(), "testing message");
     }
-
 }

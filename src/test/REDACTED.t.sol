@@ -2,14 +2,13 @@ pragma solidity ^0.8.14;
 
 import "ds-test/test.sol";
 import "../REDACTED.sol";
-import { CheatCodes } from "./utils/CheatCodes.sol";
-import { IREDACTED } from "../interfaces/IREDACTED.sol";
+import {CheatCodes} from "./utils/CheatCodes.sol";
+import {IREDACTED} from "../interfaces/IREDACTED.sol";
 
 contract ShitFestTest is DSTest, IREDACTED {
-    REDACTED public shit; 
+    REDACTED public shit;
     CheatCodes cheats = CheatCodes(HEVM_ADDRESS);
     address public fearlessLeader = address(0xdead);
-
 
     function setUp() public {
         fearlessLeader = msg.sender;
@@ -19,7 +18,6 @@ contract ShitFestTest is DSTest, IREDACTED {
         emit OurFearlessLeader(fearlessLeader, "but I'm not a rapper.exe");
         shit = new REDACTED();
     }
-
 
     function testOwner() public {
         address l = shit.fearlessLeader();
@@ -65,7 +63,7 @@ contract ShitFestTest is DSTest, IREDACTED {
         assertTrue(shit.isPrime(11));
         assertTrue(shit.isPrime(547));
 
-        // Assert these are false, using ! 
+        // Assert these are false, using !
         assertTrue(!shit.isPrime(4));
         assertTrue(!shit.isPrime(6));
         assertTrue(!shit.isPrime(111));
@@ -88,5 +86,4 @@ contract ShitFestTest is DSTest, IREDACTED {
         emit HolyShitYourePrimo(address(0x017));
         shit.primoShit();
     }
-
 }

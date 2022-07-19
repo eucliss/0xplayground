@@ -18,6 +18,8 @@ build:; forge build
 
 test :; forge test -vv
 
+test-gas :; forge test -vv --gas-report
+
 snapshot :; forge snapshot
 
 slither :; slither ./src 
