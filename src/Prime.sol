@@ -34,11 +34,11 @@ contract Prime {
             mstore(add(p, 0x80), e) // Store Exponent at FMP + base(0x60) + 0x20
             mstore(add(p, 0xa0), m) // Store Modulus at FMP + 0xa0, same logic as above
 
-            // If its zero, we cant factor anymore, revert up
+            // If its zero,
             if iszero(
                 staticcall(
                     sub(gas(), 2000),
-                    0x05, // Address of execution
+                    0x05, // Address of execution, expMod precompiled contract
                     p, // args offset, end of FMP (0x80)
                     0xc0, // Size of args, base + e + m == 96
                     p, // Return offset
