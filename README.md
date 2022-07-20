@@ -8,6 +8,10 @@ Some contracts are being built
 
 -   REDACTED.sol
 -   Prime.sol
+-   DumbProxy
+    - Storage
+    - StorageV2
+-   MockERC tokens (20, 721, 1155)
 
 ## Go
 
